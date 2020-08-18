@@ -51,7 +51,7 @@ class TodoApp extends React.Component {
       })
       const newtodos = [...this.state.todos, newItem];
     this.setState({
-      // items: this.props.sendUser,
+      todos: this.props.sendUser,
       todos: newtodos,
       currentItem:{
         description:'',
@@ -62,15 +62,15 @@ class TodoApp extends React.Component {
     // console.log(this.state.items)
   }
 
-  // handleInput = (e) => {
+  handleInput = (e) => {
     
-  //   // this.setState({
-  //   //   currentItem:{
-  //   //     description: e.target.value,
-  //   //   }
-  //   // })
-  //   // console.log(this.state.currentItem)
-  // }
+    this.setState({
+      currentItem:{
+        description: e.target.value,
+      }
+    })
+    // console.log(this.state.currentItem)
+  }
 
   handleCheck = (e, id) => {
     // console.log(e)

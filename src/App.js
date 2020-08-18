@@ -34,7 +34,7 @@ class App extends Component {
       term: "",
       todos: [],
       input: '',
-      route: 'home',
+      route: 'signin',
       isSignedIn: false,
       user: {
         id: '',
