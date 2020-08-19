@@ -26,7 +26,7 @@ function ListItems({todos, deleteItem, setUpdate, handleCheck, completed}){
             <span>
                 <FontAwesomeIcon className="faicons" onClick={() => {
                     deleteItem(todo._id)
-                    console.log(todo._id)
+                    // console.log(todo)
                 }} icon="trash" />
             </span>
         </p>

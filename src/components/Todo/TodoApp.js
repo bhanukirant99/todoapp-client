@@ -28,7 +28,7 @@ class TodoApp extends React.Component {
   // }
 
   addItem = (e) => {
-    // console.log(this.state.todos)
+    console.log(this.state.todos)
     // console.log(this.props.sendUser.id)
     e.preventDefault();
     const newItem = this.state.currentItem;
