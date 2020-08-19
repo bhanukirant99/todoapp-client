@@ -138,8 +138,8 @@ class TodoApp extends React.Component {
   // }
 
   deleteItem = (id) => {
-    const filteredTodo = this.state.todos.filter(todo =>
-      todo._id===id);
+    const filteredTodos = this.state.todos.filter(todo =>
+      todo._id!==id);
     fetch('http://localhost:3000/deletetodo', {
       method: 'put',
       headers: {'Content-Type': 'application/json'},
@@ -149,12 +149,16 @@ class TodoApp extends React.Component {
       })
     })
       .then(response => response.json())
-      .then(user => {
-        // if (user) {
-          console.log(user)
-        // }
+      .then(res => {
+        console.log(res)
+        if (res) {
+          console.log(res)
+        }
       })
-    console.log(filteredTodo)
+    console.log(filteredTodos)
+    this.setState({
+      todos: filteredTodos
+    })
   }
 
   setUpdate = (text, id) => {

@@ -50,9 +50,19 @@ class App extends Component {
       id: user._id,
       name: user.name,
       email: user.email,
-      todos: user.todos,
+      todos: user.todos
     }})
     // this.loadUser()
+    const todos = this.state.user.todos;
+    const uptodos = todos.filter(todo => {
+      if(todo.description !=='') {
+        return todo
+      }
+    })
+    console.log(uptodos)
+    // this.setState({
+    //   user: uptodos
+    // })
   }
 
   // loadUser = () => {
